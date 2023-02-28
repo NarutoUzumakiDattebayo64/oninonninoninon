@@ -20,6 +20,11 @@ function resultadoObtenido(error, resultado) {
     resultadoAnterior = resultado[0].label;
   }
 }
-
+function hablar(mensaje){
+    var leerEnVozAlta = window.speechSynthesis;
+    var lectura = new SpeechSynthesisUtterance(mensaje);
+    lectura.lang = "es-MX";
+    leerEnVozAlta.speak(lectura);  
+}
 
 
