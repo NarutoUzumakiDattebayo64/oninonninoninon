@@ -10,7 +10,7 @@ function modelo_listo() {
 }
 function draw() {
   image(video, 0, 0, 300, 300);
-  reconocimento.classify(video, resultadoObtenido)
+  reconocimiento.classify(video, resultadoObtenido)
 }
 function resultadoObtenido(error, resultado) {
   if (!error && resultado[0].confidence > 0.5 && resultadoAnterior != resultado[0].label) {
